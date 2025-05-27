@@ -342,8 +342,8 @@
 
    .carousel-track {
      display: flex;
-     animation: scroll 20s linear infinite;
-     width: calc(200px * 20); /* 10 items * 200px * 2 for seamless loop */
+     animation: scroll 30s linear infinite;
+     width: calc(200px * 36); /* 18 items originales + 18 duplicados = 36 total */
    }
 
    .carousel-item {
@@ -353,11 +353,12 @@
      align-items: center;
      justify-content: center;
      padding: 20px;
+     flex-shrink: 0;
    }
 
    @keyframes scroll {
      0% { transform: translateX(0); }
-     100% { transform: translateX(calc(-200px * 10)); }
+     100% { transform: translateX(calc(-200px * 18)); } /* Mueve exactamente 18 elementos */
    }
 
    .carousel-container:hover .carousel-track {

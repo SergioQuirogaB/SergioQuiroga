@@ -188,3 +188,59 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('#habilidades .glass').forEach(section => {
   observer.observe(section);
 });
+
+// Actualizar año automáticamente en el footer
+document.addEventListener('DOMContentLoaded', () => {
+  const currentYearElement = document.getElementById('current-year');
+  if (currentYearElement) {
+    currentYearElement.textContent = new Date().getFullYear();
+  }
+});
+
+// Animación de contadores
+function animateCounter(element, target, duration = 2000) {
+  const start = 0;
+  const increment = target / (duration / 16); // 60 FPS
+  let current = start;
+  
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+    }
+    
+    // Si el número es mayor a 10, mostrar con "+"
+    if (target >= 10) {
+      element.textContent = Math.floor(current) + '+';
+    } else {
+      element.textContent = Math.floor(current);
+    }
+  }, 16);
+}
+
+// Observer para animar contadores cuando estén en vista
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const counter = entry.target;
+      const target = parseInt(counter.dataset.target);
+      
+      // Solo animar si no se ha animado antes
+      if (!counter.classList.contains('animated')) {
+        counter.classList.add('animated');
+        animateCounter(counter, target);
+      }
+    }
+  });
+}, {
+  threshold: 0.7
+});
+
+// Observar todos los contadores
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    counterObserver.observe(counter);
+  });
+});

@@ -101,21 +101,21 @@
           </p>
           
           <!-- Botones de redes sociales y contacto -->
-          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+          <div class="flex flex-row gap-6 justify-center items-center mb-16">
             <!-- Enlace a GitHub -->
             <a href="https://github.com/SergioQuirogaB" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-8 py-4 inline-flex items-center">
-              <i class="fab fa-github mr-3"></i>
-              GitHub
+              <i class="fab fa-github sm:mr-3"></i>
+              <span class="hidden sm:inline">GitHub</span>
+            </a>
+            <!-- Enlace a WhatsApp -->
+            <a href="https://wa.me/3133813154?text=¡Hola%20Sergio!%20:)%20Vi%20tu%20portafolio%20y%20está%20increíble.%20Me%20encantaría%20conocerte%20y%20conversar%20un%20poco." target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center">
+              <i class="fab fa-whatsapp sm:mr-3"></i>
+              <span class="hidden sm:inline">Contacto</span>
             </a>
             <!-- Enlace a LinkedIn -->
             <a href="https://www.linkedin.com/in/sergioquiroga-fullstack/" target="_blank" rel="noopener noreferrer" class="border-2 border-gray-700 text-gray-700 dark:border-gray-300 dark:text-gray-300 px-8 py-4 rounded-full font-semibold hover:bg-gray-700 hover:text-white dark:hover:bg-gray-300 dark:hover:text-gray-900 transition-all duration-300 inline-flex items-center">
-              <i class="fab fa-linkedin mr-3"></i>
-              LinkedIn
-            </a>
-            <!-- Enlace a WhatsApp -->
-            <a href="https://wa.me/3133813154" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center">
-              <i class="fab fa-whatsapp mr-3"></i>
-              Contacto
+              <i class="fab fa-linkedin sm:mr-3"></i>
+              <span class="hidden sm:inline">LinkedIn</span>
             </a>
           </div>
         </div>
@@ -156,24 +156,28 @@
               
               <!-- Descripción profesional -->
               <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                Con más de 2 años de experiencia en el desarrollo de software, me especializo en crear 
-                soluciones innovadoras que combinan funcionalidad excepcional con diseño vanguardista.
+                Con 2 años de experiencia en el desarrollo de software, 
+                me especializo en crear soluciones innovadoras que combinan 
+                funcionalidad excepcional con diseño vanguardista.
               </p>
               <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                Mi expertise abarca desde el backend robusto con C# .NET y PHP, hasta interfaces 
-                intuitivas con Vue.js y tecnologías modernas de frontend.
+                Mi expertise abarca desde el backend robusto con <strong>.NET</strong> y <strong>PHP</strong>,
+                hasta interfaces intuitivas con <strong>Vue.js</strong> y tecnologías modernas 
+                de frontend. También tengo experiencia en automatizaciones con
+                <strong>Python</strong>. Me destaco por mi comunicación efectiva, trabajo en
+                equipo y enfoque en la resolución de problemas.
               </p>
               
               <!-- Estadísticas profesionales -->
               <div class="grid grid-cols-2 gap-6 mb-8">
                 <!-- Número de proyectos -->
                 <div class="text-center p-4 glass rounded-2xl card-hover">
-                  <div class="text-3xl font-bold gradient-text">12+</div>
+                  <div class="text-3xl font-bold gradient-text counter" data-target="20">0+</div>
                   <div class="text-gray-500">Proyectos</div>
                 </div>
                 <!-- Años de experiencia -->
                 <div class="text-center p-4 glass rounded-2xl card-hover">
-                  <div class="text-3xl font-bold gradient-text">2+</div>
+                  <div class="text-3xl font-bold gradient-text counter" data-target="2">0+</div>
                   <div class="text-gray-500">Años Exp.</div>
                 </div>
               </div>
@@ -251,20 +255,20 @@
                 <span class="font-semibold text-gray-700 dark:text-gray-300">SQL Server</span>
               </div>
               
-              <!-- Oracle DB -->
-              <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
-                  <i class="fas fa-database"></i>
-                </div>
-                <span class="font-semibold text-gray-700 dark:text-gray-300">Oracle DB</span>
-              </div>
-              
               <!-- MongoDB -->
               <div class="carousel-item group">
                 <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-leaf"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">MongoDB</span>
+              </div>
+
+              <!-- Oracle DB -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-database"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Oracle DB</span>
               </div>
               
               <!-- Git -->
@@ -275,7 +279,64 @@
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Git</span>
               </div>
               
+              <!-- VS Code -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-code"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">VS Code</span>
+              </div>
+              
+              <!-- Flask -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-flask"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Flask</span>
+              </div>
+              
+              <!-- Laravel -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-laravel"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Laravel</span>
+              </div>
+              
+              <!-- JavaScript -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-js-square"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">JavaScript</span>
+              </div>
+              
+              <!-- Tailwind CSS -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-wind"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Tailwind</span>
+              </div>
+              
+              <!-- HTML5 -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-html5"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">HTML5</span>
+              </div>
+              
+              <!-- CSS3 -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-css3-alt"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">CSS3</span>
+              </div>
+              
               <!-- Conjunto duplicado para bucle continuo -->
+              <!-- C# .NET -->
               <div class="carousel-item group">
                 <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-microsoft"></i>
@@ -283,6 +344,7 @@
                 <span class="font-semibold text-gray-700 dark:text-gray-300">C# .NET</span>
               </div>
               
+              <!-- PHP -->
               <div class="carousel-item group">
                 <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-php"></i>
@@ -290,6 +352,7 @@
                 <span class="font-semibold text-gray-700 dark:text-gray-300">PHP</span>
               </div>
               
+              <!-- Vue.js -->
               <div class="carousel-item group">
                 <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-vuejs"></i>
@@ -297,6 +360,7 @@
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Vue.js</span>
               </div>
               
+              <!-- Python -->
               <div class="carousel-item group">
                 <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-python"></i>
@@ -304,6 +368,7 @@
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Python</span>
               </div>
               
+              <!-- Docker -->
               <div class="carousel-item group">
                 <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-docker"></i>
@@ -311,6 +376,7 @@
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Docker</span>
               </div>
               
+              <!-- Azure -->
               <div class="carousel-item group">
                 <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-cloud"></i>
@@ -318,6 +384,7 @@
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Azure</span>
               </div>
               
+              <!-- SQL Server -->
               <div class="carousel-item group">
                 <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-database"></i>
@@ -325,13 +392,7 @@
                 <span class="font-semibold text-gray-700 dark:text-gray-300">SQL Server</span>
               </div>
               
-              <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
-                  <i class="fas fa-database"></i>
-                </div>
-                <span class="font-semibold text-gray-700 dark:text-gray-300">Oracle DB</span>
-              </div>
-              
+              <!-- MongoDB -->
               <div class="carousel-item group">
                 <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-leaf"></i>
@@ -339,11 +400,76 @@
                 <span class="font-semibold text-gray-700 dark:text-gray-300">MongoDB</span>
               </div>
               
+              <!-- Oracle DB -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-database"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Oracle DB</span>
+              </div>
+              
+              <!-- Git -->
               <div class="carousel-item group">
                 <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-git-alt"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Git</span>
+              </div>
+              
+              <!-- VS Code -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-code"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">VS Code</span>
+              </div>
+              
+              <!-- Flask -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-flask"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Flask</span>
+              </div>
+              
+              <!-- Laravel -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-laravel"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Laravel</span>
+              </div>
+              
+              <!-- JavaScript -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-js-square"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">JavaScript</span>
+              </div>
+              
+              <!-- Tailwind CSS -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-wind"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Tailwind</span>
+              </div>
+              
+              <!-- HTML5 -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-html5"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">HTML5</span>
+              </div>
+              
+              <!-- CSS3 -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-css3-alt"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">CSS3</span>
               </div>
             </div>
           </div>
@@ -679,7 +805,7 @@
         </div>
         
         <p class="text-gray-500 mb-4">
-          © 2025 Sergio Quiroga. Todos los derechos reservados.
+          © <span id="current-year">2025</span> Sergio Quiroga. Todos los derechos reservados.
         </p>
         
         <p class="text-sm text-gray-400">
