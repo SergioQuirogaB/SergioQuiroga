@@ -1,423 +1,698 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Sergio Quiroga - Desarrollador Full Stack & Python | Experto en Automatización y Desarrollo Web</title>
-    <meta name="description" content="Desarrollador Full Stack especializado en Python, PHP, JavaScript y C#. Experto en automatización, desarrollo web, aplicaciones empresariales, sistemas POS, gestión de inventario y facturación electrónica. Portafolio profesional con proyectos demostrativos." />
-    <meta name="keywords" content="desarrollador full stack, python developer, automatización python, desarrollo web, php developer, javascript developer, c# developer, sistemas pos, facturación electrónica, gestión de inventario, desarrollo backend, desarrollo frontend, aplicaciones web, automatización de procesos, sergio quiroga, portafolio desarrollador, bogotá, colombia" />
-    <meta name="author" content="Sergio Quiroga" />
-    <meta name="robots" content="index, follow" />
-    <meta name="geo.region" content="CO" />
-    <meta name="geo.placename" content="Bogotá" />
-    <meta name="geo.position" content="4.6097;-74.0817" />
-    <meta name="ICBM" content="4.6097, -74.0817" />
-    <link rel="canonical" href="https://sergioquirogab.github.io/" />
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Portafolio Sergio Quiroga - Desarrollador Full Stack</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="imgs/sq.ico" type="image/x-icon">
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        .gradient-text {
-            background: linear-gradient(45deg, #96bdff, #8e38ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .gradient-border {
-            position: relative;
-        }
-        .gradient-border::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(45deg, #96bdff, #8e38ff);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-        .gradient-border:hover::after {
-            transform: scaleX(1);
-        }
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(142, 56, 255, 0.1);
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #96bdff, #8e38ff, #96bdff);
-            border-radius: 2px;
-            transform: scaleX(1);
-            background-size: 200% 100%;
-            animation: gradient-move 2s linear infinite;
-        }
-        @keyframes gradient-move {
-            0% {
-                background-position: 0% 50%;
-            }
-            100% {
-                background-position: 100% 50%;
-            }
-        }
-    </style>
-</head>
-<body class="bg-slate-50 text-slate-800" style="font-family: 'Open Sans', sans-serif;">
-    <!-- Particles.js Container -->
-    <div id="particles-js" class="fixed inset-0 z-0"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-    <div class="relative z-10">
-        <header class="flex justify-between items-center p-6 bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
-            <nav class="ml-auto space-x-6">
-                <a class="nav-link text-slate-700 hover:text-[#8e38ff] transition-colors duration-300 font-medium" href="https://github.com/SergioQuirogaB">GitHub</a>
-                <a class="nav-link text-slate-700 hover:text-[#8e38ff] transition-colors duration-300 font-medium" href="https://www.linkedin.com/in/sergio-quiroga-softwaredev">Linkedin</a>
-            </nav>
-        </header>    
-
-        <!-- Main Content Section -->
-        <div data-aos="fade-up" data-aos-duration="3000">
-            <main class="flex flex-col sm:flex-row items-center sm:items-start p-6 space-y-6 sm:space-y-0 sm:space-x-6">
-            <!-- Introduction Section -->
-            <div class="sm:w-2/3 p-8">
-                <h1 class="text-3xl sm:text-4xl font-bold mb-4 relative group">
-                    Hola soy
-                    <span class="gradient-text" id="role">Sergio Quiroga</span>
-                    <span class="absolute bottom-[-4px] left-0 w-full h-[2px] bg-gradient-to-r from-[#96bdff] to-[#8e38ff] scale-x-0 group-hover:scale-x-50 transition-transform duration-300 origin-left"></span>
-                </h1>
-                <p class="text-sm sm:text-lg mb-4 mt-16 text-slate-600 leading-relaxed">
-                    Soy un <strong>Desarrollador Full Stack</strong> con experiencia en tecnologías web modernas. Utilizo <strong>Python</strong> principalmente para automatización de procesos y desarrollo de scripts. Tengo experiencia en <strong>sistemas POS</strong>, <strong>gestión de inventario</strong> y <strong>facturación</strong>. Ofrezco soluciones tecnológicas eficientes y seguras desde <strong>Bogotá, Colombia</strong>
-                </p>
-            </div>
-
-            <div class="sm:w-1/3 mt-14">
-                <img id="profile-img" alt="Foto de Sergio" class="w-30 h-72 object-cover mx-auto rounded-lg shadow-lg transition-opacity duration-700" src="imgs/sq.png" />
-            </div>
-            </main>
-        </div>
-       
-        <!-- Habilidades -->
-        <div data-aos="fade-up" data-aos-duration="3000">
-            <section class="p-6 flex justify-center items-center">
-            <div class="sm:w-2/3 text-center">
-                <h1 class="text-3xl sm:text-4xl font-bold mb-4 pb-2 gradient-border">
-                    Mis <span class="gradient-text">habilidades</span>
-                </h1>
-                <div class="flex flex-wrap justify-center gap-6 mt-16">
-                <img src="imgs/php.svg" alt="PHP" class="w-16 h-10 sm:w-24 sm:h-16 skill-icon hover:scale-110 transition-transform duration-300">
-                <img src="imgs/html.svg" alt="HTML" class="w-16 h-10 sm:w-24 sm:h-16 skill-icon hover:scale-110 transition-transform duration-300">
-                <img src="imgs/js.svg" alt="JavaScript" class="w-16 h-10 sm:w-24 sm:h-16 skill-icon hover:scale-110 transition-transform duration-300">
-                <img src="imgs/css.svg" alt="CSS" class="w-16 h-10 sm:w-24 sm:h-16 skill-icon hover:scale-110 transition-transform duration-300">
-                <img src="imgs/sechar.svg" alt="C#" class="w-16 h-10 sm:w-24 sm:h-16 skill-icon hover:scale-110 transition-transform duration-300">
-                <img src="imgs/python.svg" alt="Python" class="w-16 h-10 sm:w-24 sm:h-16 skill-icon hover:scale-110 transition-transform duration-300">
-                <img src="imgs/git.svg" alt="Git" class="w-16 h-10 sm:w-24 sm:h-16 skill-icon hover:scale-110 transition-transform duration-300">
-                <img src="imgs/mysql.svg" alt="Mysql" class="w-16 h-10 sm:w-24 sm:h-16 skill-icon hover:scale-110 transition-transform duration-300">
-                <img src="imgs/vs.svg" alt="Visual Studio" class="w-16 h-10 sm:w-24 sm:h-16 skill-icon hover:scale-110 transition-transform duration-300">
-                </div>
-            </div>
-            </section>
-        </div>
-
-        <!-- Habilidades en aprendizaje -->
-        <div data-aos="fade-up" data-aos-duration="3000">
-            <section class="p-6 flex justify-center items-center mt-10">
-                <div class="sm:w-2/3 text-center">
-                    <h1 class="text-3xl sm:text-4xl font-bold mb-4 pb-2 gradient-border">
-                        Habilidades en <span class="gradient-text">aprendizaje</span>
-                    </h1>
-                    <div class="flex flex-wrap justify-center gap-6 mt-16 mb-8">
-                        <div class="w-36 sm:w-44 bg-white p-4 rounded-lg shadow-lg card-hover">
-                            <img src="imgs/docker.svg" alt="Docker" class="w-16 h-16 mx-auto">
-                            <h3 class="text-lg font-semibold mt-3">Docker</h3>
-                            <div class="w-full bg-slate-100 rounded-full h-2.5 mt-2">
-                                <div class="bg-gradient-to-r from-[#96bdff] to-[#8e38ff] h-2.5 rounded-full" style="width: 50%"></div>
-                            </div>
-                        </div>
-                        <div class="w-36 sm:w-44 bg-white p-4 rounded-lg shadow-lg card-hover">
-                            <img src="imgs/kubernetes.svg" alt="Kubernetes" class="w-16 h-16 mx-auto">
-                            <h3 class="text-lg font-semibold mt-3">Kubernetes</h3>
-                            <div class="w-full bg-slate-100 rounded-full h-2.5 mt-2">
-                                <div class="bg-gradient-to-r from-[#96bdff] to-[#8e38ff] h-2.5 rounded-full" style="width: 30%"></div>
-                            </div>
-                        </div>
-                        <div class="w-36 sm:w-44 bg-white p-4 rounded-lg shadow-lg card-hover">
-                            <img src="imgs/aws.svg" alt="AWS" class="w-16 h-16 mx-auto">
-                            <h3 class="text-lg font-semibold mt-3">AWS</h3>
-                            <div class="w-full bg-slate-100 rounded-full h-2.5 mt-2">
-                                <div class="bg-gradient-to-r from-[#96bdff] to-[#8e38ff] h-2.5 rounded-full" style="width: 40%"></div>
-                            </div>
-                        </div>
-                        <div class="w-36 sm:w-44 bg-white p-4 rounded-lg shadow-lg card-hover">
-                            <img src="imgs/terraform.svg" alt="Terraform" class="w-16 h-16 mx-auto">
-                            <h3 class="text-lg font-semibold mt-3">Terraform</h3>
-                            <div class="w-full bg-slate-100 rounded-full h-2.5 mt-2">
-                                <div class="bg-gradient-to-r from-[#96bdff] to-[#8e38ff] h-2.5 rounded-full" style="width: 30%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        
-        <!-- Testimonios -->
-        <div data-aos="fade-up" data-aos-duration="3000">
-            <section class="p-6 mt-10">
-                <div class="md:w-2/3 mx-auto text-center">
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 pb-2 gradient-border">Lo que dicen de mí</h2>
-                        <div class="flex flex-wrap justify-center gap-6 mt-6">
-                        <div class="bg-white p-6 rounded-lg shadow-lg w-full sm:w-1/3 card-hover">
-                            <p class="text-slate-600 mb-4">"Sergio es un desarrollador muy talentoso y profesional. Siempre busca la mejor solución para cada proyecto y tiene un excelente manejo de las tecnologías." - <strong>Laura Tibaquirá</strong></p>
-                        </div>
-                        <div class="bg-white p-6 rounded-lg shadow-lg w-full sm:w-1/3 card-hover">
-                            <p class="text-slate-600 mb-4">"Trabajar con Sergio ha sido un placer. Es un experto en backend y tiene un enfoque muy seguro y escalable para cada proyecto." - <strong>Brayan López</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- Mis Proyectos -->
-        <div data-aos="fade-up" data-aos-duration="3000">
-            <section class="p-6 flex justify-center items-center">
-                <div class="sm:w-2/3 text-center">
-                    <h1 class="text-3xl sm:text-4xl font-bold mb-4 pb-2 gradient-border">Mis 
-                        <span class="gradient-text">proyectos</span>
-                    </h1>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-16">
-                        
-                        <!-- Proyecto Card 1: Sistema POS -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-                            <h3 class="text-2xl font-bold mb-3">Sistema POS</h3>
-                            <p class="text-slate-600 mb-4">Sistema de punto de venta para comercios. Permite gestionar productos, ventas, reportes y usuarios de manera eficiente y segura.</p>
-                            <div class="flex flex-col gap-2 sm:flex-row sm:justify-center sm:gap-4">
-                                <a href="#" class="text-[#8e38ff] hover:text-[#96bdff] transition-colors duration-300 font-semibold">Ver Código →</a>   
-                            </div>
-                        </div>
-
-                        <!-- Proyecto Card 2: Sistema de Agendamiento de Citas -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-                            <h3 class="text-2xl font-bold mb-3">Sistema de Agendamiento de Citas</h3>
-                            <p class="text-slate-600 mb-4">Plataforma para reservar y gestionar citas. Incluye notificaciones automáticas y panel administrativo para control total.</p>
-                            <div class="flex flex-col gap-2 sm:flex-row sm:justify-center sm:gap-4">
-                                <a href="https://honeydew-opossum-404669.hostingersite.com/#" target="_blank" class="text-[#96bdff] hover:text-[#8e38ff] transition-colors duration-300 font-semibold">Ver Demo ↗</a>
-                            </div>
-                        </div>
-
-                        <!-- Proyecto Card 3: Sistema de Inventario con Facturación -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-                            <h3 class="text-2xl font-bold mb-3">Sistema de Inventario con Facturación</h3>
-                            <p class="text-slate-600 mb-4">Gestión de inventario y facturación electrónica. Controla el stock, genera reportes y administra ventas fácilmente.</p>
-                            <div class="flex flex-col gap-2 sm:flex-row sm:justify-center sm:gap-4">
-                                <a href="https://blueviolet-tiger-958059.hostingersite.com/" target="_blank" class="text-[#96bdff] hover:text-[#8e38ff] transition-colors duration-300 font-semibold">Ver Demo ↗</a>
-                            </div>
-                        </div>
-
-                        <!-- Proyecto Card 4 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-                            <h3 class="text-2xl font-bold mb-3">Cumpleaños</h3>
-                            <p class="text-slate-600 mb-4">Automatización que envía correos personalizados de cumpleaños. Facilita la gestión de recordatorios y mensajes especiales.</p>
-                            <div class="flex flex-col gap-2 sm:flex-row sm:justify-center sm:gap-4">
-                                <a href="https://github.com/SergioQuirogaB/Auto_Correos_Cumple" class="text-[#8e38ff] hover:text-[#96bdff] transition-colors duration-300 font-semibold">Ver Código →</a>
-                            </div>
-                        </div>
-                        
-                        <!-- Proyecto Card 5 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-                            <h3 class="text-2xl font-bold mb-3">Landing Page</h3>
-                            <p class="text-slate-600 mb-4">Landing page para un periodista, diseñada para subir y compartir reportes de manera rápida, sencilla y profesional.</p>
-                            <div class="flex flex-col gap-2 sm:flex-row sm:justify-center sm:gap-4">
-                                <a href="https://github.com/SergioQuirogaB/LandigPageNews" class="text-[#8e38ff] hover:text-[#96bdff] transition-colors duration-300 font-semibold">Ver Código →</a>
-                            </div>
-                        </div>
-
-                        <!-- Proyecto Card 6 -->
-                        <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-                            <h3 class="text-2xl font-bold mb-3">Portafolio</h3>
-                            <p class="text-slate-600 mb-4">Portafolio profesional para mostrar proyectos, habilidades y testimonios. Diseño moderno y navegación intuitiva.</p>
-                            <div class="flex flex-col gap-2 sm:flex-row sm:justify-center sm:gap-4">
-                                <a href="https://github.com/SergioQuirogaB/Pratice-Front-end" class="text-[#8e38ff] hover:text-[#96bdff] transition-colors duration-300 font-semibold">Ver Código →</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-        </div>
+  <body class="bg-gradient-to-br from-slate-50 to-blue-50 text-gray-800 min-h-screen">
+    <!-- =================================== PANTALLA DE CARGA =================================== -->
+    <div class="loading-screen" id="loading">
+      <div class="loading-logo"> S.Q</div>
     </div>
 
-    <footer class="bg-slate-800 text-center p-6 mt-14">
-        <p class="text-slate-100">© <span id="year"></span></p>
-        <p class="text-slate-100 -mt-1"><span>Bogotá, Colombia</span></p>
-        <p class="text-slate-100 -mt-1"><span>sergioquirogab2003@gmail.com</span></p>
+    <!-- Indicador de progreso de scroll -->
+    <div class="scroll-indicator" id="scroll-indicator"></div>
+
+    <!-- Cursor personalizado -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Fondo de partículas animadas -->
+    <div id="particles-js"></div>
+
+    <header class="fixed top-0 w-full z-50 glass backdrop-blur-lg border-b border-white/20" data-aos="fade-down">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <nav class="flex items-center justify-between">
+          <!-- Logo y marca -->
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-gray-700 to-gray-900 rounded-full flex items-center justify-center">
+              <span class="text-white font-bold text-lg"><img src="imgs/sq.ico" alt=""></span>
+            </div>
+          </div>
+          
+          <!-- Menú de navegación para escritorio -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#inicio" class="nav-link font-medium hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Inicio</a>
+            <a href="#sobre-mi" class="nav-link font-medium hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Sobre mí</a>
+            <a href="#habilidades" class="nav-link font-medium hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Habilidades</a>
+            <a href="#proyectos" class="nav-link font-medium hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Proyectos</a>
+            <a href="#contacto" class="nav-link font-medium hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Contacto</a>
+          </div>
+
+          <!-- Controles de tema y acciones -->
+          <div class="flex items-center space-x-4">
+            <!-- Botón de cambio de tema -->
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
+              <i class="fas fa-moon text-xl"></i>
+            </button>
+            <!-- Botón de descarga de CV -->
+            <a href="CV_Profesional_Sergio_Quiroga.pdf" download="CV_Profesional_Sergio_Quiroga.pdf" class="btn-primary">
+              <i class="fas fa-download mr-2"></i>
+              CV
+            </a>
+          </div>
+
+          <!-- Botón de menú móvil -->
+          <button id="mobile-menu-btn" class="md:hidden p-2">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </nav>
+
+        <!-- Menú móvil desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 p-4 glass rounded-lg">
+          <div class="flex flex-col space-y-4">
+            <a href="#inicio" class="font-medium hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Inicio</a>
+            <a href="#sobre-mi" class="font-medium hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Sobre mí</a>
+            <a href="#habilidades" class="font-medium hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Habilidades</a>
+            <a href="#proyectos" class="font-medium hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Proyectos</a>
+            <a href="#contacto" class="font-medium hover:text-gray-700 dark:hover:text-gray-300 transition-colors">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-20">
+      <!-- =================================== SECCIÓN HERO / PRESENTACIÓN =================================== -->
+      <section id="inicio" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Contenido principal del hero -->
+        <div class="text-center z-10" data-aos="fade-up" data-aos-duration="1000">
+          <!-- Nombre principal con gradiente -->
+          <h1 class="text-6xl md:text-8xl font-black gradient-text mb-6">
+            Sergio Quiroga
+          </h1>
+          
+          <!-- Texto con animación de escritura -->
+          <div class="text-2xl md:text-3xl text-gray-600 mb-8 h-20">
+            <span class="typing-animation">Desarrollador Full Stack Innovador</span>
+          </div>
+          
+          <!-- Descripción profesional -->
+          <p class="text-xl text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
+            Creando experiencias digitales extraordinarias con tecnologías de vanguardia
+          </p>
+          
+          <!-- Botones de redes sociales y contacto -->
+          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+            <!-- Enlace a GitHub -->
+            <a href="https://github.com/SergioQuirogaB" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-8 py-4 inline-flex items-center">
+              <i class="fab fa-github mr-3"></i>
+              GitHub
+            </a>
+            <!-- Enlace a LinkedIn -->
+            <a href="https://www.linkedin.com/in/sergioquiroga-fullstack/" target="_blank" rel="noopener noreferrer" class="border-2 border-gray-700 text-gray-700 dark:border-gray-300 dark:text-gray-300 px-8 py-4 rounded-full font-semibold hover:bg-gray-700 hover:text-white dark:hover:bg-gray-300 dark:hover:text-gray-900 transition-all duration-300 inline-flex items-center">
+              <i class="fab fa-linkedin mr-3"></i>
+              LinkedIn
+            </a>
+            <!-- Enlace a WhatsApp -->
+            <a href="https://wa.me/3133813154" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg inline-flex items-center">
+              <i class="fab fa-whatsapp mr-3"></i>
+              Contacto
+            </a>
+          </div>
+        </div>
+        
+        <!-- Indicador de scroll animado -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div class="w-6 h-10 border-2 border-gray-700 dark:border-gray-300 rounded-full flex justify-center">
+            <div class="w-1 h-3 bg-gray-700 dark:bg-gray-300 rounded-full mt-2 animate-pulse"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================== SECCIÓN SOBRE MÍ =================================== -->
+      <section id="sobre-mi" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+          <!-- Encabezado de la sección -->
+          <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-5xl font-bold gradient-text mb-6">Sobre Mí</h2>
+            <p class="text-xl text-gray-500 max-w-3xl mx-auto">
+              Transformando ideas en realidades digitales con pasión y precisión
+            </p>
+          </div>
+          
+          <!-- Contenido principal: imagen y descripción -->
+          <div class="grid md:grid-cols-2 gap-16 items-center">
+            <!-- Imagen profesional -->
+            <div data-aos="fade-right" data-aos-duration="1000">
+              <div class="glass rounded-3xl p-8 card-hover">
+                <img src="imgs/Sergio.png" 
+                     alt="Sergio Quiroga" 
+                     class="w-full h-96 object-contain rounded-2xl shadow-2xl">
+              </div>
+            </div>
+            
+            <!-- Información personal y profesional -->
+            <div data-aos="fade-left" data-aos-duration="1000">
+              <h3 class="text-3xl font-bold mb-6">Desarrollador Full Stack Apasionado</h3>
+              
+              <!-- Descripción profesional -->
+              <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                Con más de 2 años de experiencia en el desarrollo de software, me especializo en crear 
+                soluciones innovadoras que combinan funcionalidad excepcional con diseño vanguardista.
+              </p>
+              <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                Mi expertise abarca desde el backend robusto con C# .NET y PHP, hasta interfaces 
+                intuitivas con Vue.js y tecnologías modernas de frontend.
+              </p>
+              
+              <!-- Estadísticas profesionales -->
+              <div class="grid grid-cols-2 gap-6 mb-8">
+                <!-- Número de proyectos -->
+                <div class="text-center p-4 glass rounded-2xl card-hover">
+                  <div class="text-3xl font-bold gradient-text">12+</div>
+                  <div class="text-gray-500">Proyectos</div>
+                </div>
+                <!-- Años de experiencia -->
+                <div class="text-center p-4 glass rounded-2xl card-hover">
+                  <div class="text-3xl font-bold gradient-text">2+</div>
+                  <div class="text-gray-500">Años Exp.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================== SECCIÓN HABILIDADES Y TECNOLOGÍAS=================================== -->
+      <section id="habilidades" class="py-20 px-6 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div class="max-w-6xl mx-auto">
+          <!-- Encabezado de la sección -->
+          <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-5xl font-bold gradient-text mb-6">Habilidades & Tecnologías</h2>
+            <p class="text-xl text-gray-500">Dominando las tecnologías más avanzadas del mercado</p>
+          </div>
+          
+          <!-- =================================== CARRUSEL DE TECNOLOGÍAS =================================== -->
+          <div class="carousel-container mb-16" data-aos="fade-up" data-aos-delay="200">
+            <div class="carousel-track">
+              <!-- Primer conjunto de tecnologías -->
+              <!-- C# .NET -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-microsoft"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">C# .NET</span>
+              </div>
+              
+              <!-- PHP -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-php"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">PHP</span>
+              </div>
+              
+              <!-- Vue.js -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-vuejs"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Vue.js</span>
+              </div>
+              
+              <!-- Python -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-python"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Python</span>
+              </div>
+              
+              <!-- Docker -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-docker"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Docker</span>
+              </div>
+              
+              <!-- Azure -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-cloud"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Azure</span>
+              </div>
+              
+              <!-- SQL Server -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-database"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">SQL Server</span>
+              </div>
+              
+              <!-- Oracle DB -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-database"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Oracle DB</span>
+              </div>
+              
+              <!-- MongoDB -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-leaf"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">MongoDB</span>
+              </div>
+              
+              <!-- Git -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-git-alt"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Git</span>
+              </div>
+              
+              <!-- Conjunto duplicado para bucle continuo -->
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-microsoft"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">C# .NET</span>
+              </div>
+              
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-php"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">PHP</span>
+              </div>
+              
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-vuejs"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Vue.js</span>
+              </div>
+              
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-python"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Python</span>
+              </div>
+              
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-docker"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Docker</span>
+              </div>
+              
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-cloud"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Azure</span>
+              </div>
+              
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-database"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">SQL Server</span>
+              </div>
+              
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-database"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Oracle DB</span>
+              </div>
+              
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fas fa-leaf"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">MongoDB</span>
+              </div>
+              
+              <div class="carousel-item group">
+                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                  <i class="fab fa-git-alt"></i>
+                </div>
+                <span class="font-semibold text-gray-700 dark:text-gray-300">Git</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- =================================== BARRAS DE HABILIDADES DETALLADAS =================================== -->
+          <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="400">
+            <!-- Frontend Development -->
+            <div class="glass rounded-3xl p-8">
+              <h3 class="text-2xl font-bold mb-8">Frontend Development</h3>
+              
+              <!-- Vue.js -->
+              <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                  <span class="font-semibold">Vue.js</span>
+                  <span class="text-gray-700 dark:text-gray-300 font-bold">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%"></div>
+                </div>
+              </div>
+              
+              <!-- JavaScript / TypeScript -->
+              <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                  <span class="font-semibold">JavaScript / TypeScript</span>
+                  <span class="text-gray-700 dark:text-gray-300 font-bold">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%"></div>
+                </div>
+              </div>
+              
+              <!-- HTML5 / CSS3 -->
+              <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                  <span class="font-semibold">HTML5 / CSS3</span>
+                  <span class="text-gray-700 dark:text-gray-300 font-bold">95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%"></div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Backend Development -->
+            <div class="glass rounded-3xl p-8">
+              <h3 class="text-2xl font-bold mb-8">Backend Development</h3>
+              
+              <!-- C# .NET -->
+              <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                  <span class="font-semibold">C# .NET</span>
+                  <span class="text-gray-700 dark:text-gray-300 font-bold">92%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 92%"></div>
+                </div>
+              </div>
+              
+              <!-- PHP / Laravel -->
+              <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                  <span class="font-semibold">PHP / Laravel</span>
+                  <span class="text-gray-700 dark:text-gray-300 font-bold">88%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 88%"></div>
+                </div>
+              </div>
+              
+              <!-- Python / Flask -->
+              <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                  <span class="font-semibold">Python / Flask</span>
+                  <span class="text-gray-700 dark:text-gray-300 font-bold">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Bases de Datos -->
+            <div class="glass rounded-3xl p-8">
+              <h3 class="text-2xl font-bold mb-8">Bases de Datos</h3>
+              
+              <!-- SQL Server -->
+              <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                  <span class="font-semibold">SQL Server</span>
+                  <span class="text-gray-700 dark:text-gray-300 font-bold">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%"></div>
+                </div>
+              </div>
+              
+              <!-- Oracle Database -->
+              <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                  <span class="font-semibold">Oracle Database</span>
+                  <span class="text-gray-700 dark:text-gray-300 font-bold">55%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 55%"></div>
+                </div>
+              </div>
+              
+              <!-- MongoDB -->
+              <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                  <span class="font-semibold">MongoDB</span>
+                  <span class="text-gray-700 dark:text-gray-300 font-bold">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="proyectos" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-5xl font-bold gradient-text mb-6">Proyectos Destacados</h2>
+            <p class="text-xl text-gray-500">Soluciones innovadoras que marcan la diferencia</p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Proyecto 1 -->
+            <div class="glass rounded-3xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="100">
+              <div class="h-48 bg-gradient-to-r from-gray-700 to-gray-800 flex items-center justify-center">
+                <i class="fas fa-calendar-alt text-6xl text-white"></i>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-3">Sistema de Agendamiento</h3>
+                <p class="text-gray-600 mb-4">Plataforma web avanzada para gestión de citas con automatización.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Tailwind CSS</span>
+                  <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">PHP</span>
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">JavaScript</span>
+                  <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">MySQL</span>
+                </div>
+                <div class="flex justify-between">
+                  <button class="text-blue-600 hover:text-blue-800 font-semibold">
+                    <!-- <i class="fas fa-external-link-alt mr-2"></i>Demo -->
+                  </button>
+                  <button class="text-gray-600 hover:text-gray-800 font-semibold">
+                    <i class="fab fa-github mr-2"></i>Privado
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Proyecto 2 -->
+            <div class="glass rounded-3xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="200">
+              <div class="h-48 bg-gradient-to-r from-gray-600 to-gray-700 flex items-center justify-center">
+                <i class="fas fa-cash-register text-6xl text-white"></i>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-3">Sistema POS Inteligente</h3>
+                <p class="text-gray-600 mb-4">Punto de venta con análisis en tiempo real y gestión inteligente de inventario.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">PHP</span>
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">JavaScript</span>
+                  <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">MySQL</span>
+                  <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Tailwind CSS</span>
+                </div>
+                <div class="flex justify-between">
+                  <button class="text-blue-600 hover:text-blue-800 font-semibold">
+                    <!-- <i class="fas fa-external-link-alt mr-2"></i>Demo -->
+                  </button>
+                  <button class="text-gray-600 hover:text-gray-800 font-semibold">
+                    <i class="fab fa-github mr-2"></i>Privado
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Proyecto 3 -->
+            <div class="glass rounded-3xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="300">
+              <div class="h-48 bg-gradient-to-r from-gray-800 to-gray-900 flex items-center justify-center">
+                <i class="fas fa-bug text-6xl text-white"></i>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-3">Plugin Mantis</h3>
+                <p class="text-gray-600 mb-4">Este plugin envía mensajes automáticos tras cierto tiempo. Ideal para automatizar notificaciones en MantisBT.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">PHP</span>
+                  <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">JavaScript</span>
+                </div>
+                <div class="flex justify-between">
+                  <button class="text-blue-600 hover:text-blue-800 font-semibold">
+                    <!-- <i class="fas fa-external-link-alt mr-2"></i>Demo -->
+                  </button>
+                  <button class="text-gray-600 hover:text-gray-800 font-semibold">
+                    <a href="https://github.com/SergioQuirogaB/Plugin_Mantis"><i class="fab fa-github mr-2"></i>Código</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Proyecto 4 -->
+            <div class="glass rounded-3xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="400">
+              <div class="h-48 bg-gradient-to-r from-gray-500 to-gray-600 flex items-center justify-center">
+                <i class="fas fa-chart-line text-6xl text-white"></i>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-3">API Azure - Cost Dashboard</h3>
+                <p class="text-gray-600 mb-4">Servicio que almacena datos de costos de suscripciones de Azure en una base de datos y los visualiza con Power BI.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">Python</span>
+                  <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Azure API</span>
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Power BI</span>
+                  <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">SQL</span>
+                </div>
+                <div class="flex justify-between">
+                  <button class="text-blue-600 hover:text-blue-800 font-semibold">
+                    <!-- <i class="fas fa-external-link-alt mr-2"></i>Demo -->
+                  </button>
+                  <button class="text-gray-600 hover:text-gray-800 font-semibold">
+                    <a href="https://github.com/SergioQuirogaB/API_PowerBI"><i class="fab fa-github mr-2"></i>Código</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Proyecto 5 -->
+            <div class="glass rounded-3xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="500">
+              <div class="h-48 bg-gradient-to-r from-gray-600 to-gray-800 flex items-center justify-center">
+                <i class="fas fa-envelope text-6xl text-white"></i>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-3">AutoMailer Interactivo</h3>
+                <p class="text-gray-600 mb-4">Aplicación web para el envío automatizado de correos con interfaz intuitiva, desarrollada con Flask y manejo de datos en JSON.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">Vue.js</span>
+                  <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Python</span>
+                  <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Flask</span>
+                  <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-full text-sm">JSON</span>
+                </div>
+                <div class="flex justify-between">
+                  <button class="text-blue-600 hover:text-blue-800 font-semibold">
+                    <!-- <i class="fas fa-external-link-alt mr-2"></i>Demo -->
+                  </button>
+                  <button class="text-gray-600 hover:text-gray-800 font-semibold">
+                    <a href="https://github.com/SergioQuirogaB/Auto_Correos_Cumple"><i class="fab fa-github mr-2"></i>Código</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Proyecto 6 -->
+            <div class="glass rounded-3xl overflow-hidden card-hover" data-aos="fade-up" data-aos-delay="600">
+              <div class="h-48 bg-gradient-to-r from-gray-700 to-gray-900 flex items-center justify-center">
+                <i class="fas fa-certificate text-6xl text-white"></i>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-3">Seguimiento de Certificados MV</h3>
+                <p class="text-gray-600 mb-4">Aplicación web para el control y seguimiento de certificados de máquinas virtuales, con interfaz moderna y gestión dinámica de datos.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Python</span>
+                  <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Flask</span>
+                  <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Tailwind</span>
+                  <span class="px-3 py-1 bg-sky-100 text-sky-800 rounded-full text-sm">JSON</span>
+                </div>
+                <div class="flex justify-between">
+                  <button class="text-blue-600 hover:text-blue-800 font-semibold">
+                    <!-- <i class="fas fa-external-link-alt mr-2"></i>Demo -->
+                  </button>
+                  <button class="text-gray-600 hover:text-gray-800 font-semibold">
+                    <a href="https://github.com/SergioQuirogaB/ssl"><i class="fab fa-github mr-2"></i>Código</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contacto" class="py-20 px-6 bg-gradient-to-r from-gray-50 to-blue-50">
+        <div class="max-w-4xl mx-auto text-center">
+          <div data-aos="fade-up">
+            <h2 class="text-5xl font-bold gradient-text mb-6">¿Tienes un proyecto en mente?</h2>
+            <p class="text-xl text-gray-500 mb-12">Hagamos realidad tus ideas juntos</p>
+          </div>
+          
+          <div class="glass rounded-3xl p-12 card-hover" data-aos="fade-up" data-aos-delay="200">
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <h3 class="font-bold mb-2">Email</h3>
+                <p class="text-gray-600">sequiba07@gmail.com</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <h3 class="font-bold mb-2">Teléfono</h3>
+                <p class="text-gray-600">+57 313 381 3154</p>
+              </div>
+              
+              <div class="text-center">
+                <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3 class="font-bold mb-2">Ubicación</h3>
+                <p class="text-gray-600">Bogotá, Colombia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center border-t border-gray-200">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="flex justify-center space-x-8 text-3xl mb-8">
+          <a href="https://github.com/SergioQuirogaB" class="text-gray-400 hover:text-blue-600 transition-all duration-300 hover:scale-125">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/sergioquiroga-fullstack/" class="text-gray-400 hover:text-blue-600 transition-all duration-300 hover:scale-125">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        
+        <p class="text-gray-500 mb-4">
+          © 2025 Sergio Quiroga. Todos los derechos reservados.
+        </p>
+        
+        <p class="text-sm text-gray-400">
+          Desarrollado con enfoque en calidad e innovación ❤️
+        </p>
+      </div>
     </footer>
 
-    <!-- Botón para subir -->
-    <button id="back-to-top" class="fixed bottom-6 right-3 bg-gradient-to-r from-[#96bdff] to-[#8e38ff] text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all transform scale-90 sm:block hidden">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <!-- Sonido del ascensor -->
-    <audio id="elevator-sound" src="imgs/elevador.mp3" preload="auto"></audio>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        AOS.init();
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Configuración de particles.js
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#8e38ff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#8e38ff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 400,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 100,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-
-        const backToTopButton = document.getElementById('back-to-top');
-        const elevatorSound = document.getElementById('elevator-sound');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                backToTopButton.classList.remove('hidden');
-            } else {
-                backToTopButton.classList.add('hidden');
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            elevatorSound.play();
-            let scrollInterval = setInterval(() => {
-                window.scrollBy(0, -5); 
-                if (window.scrollY <= 0) {
-                    clearInterval(scrollInterval);
-                }
-            }, 5); 
-        });
-
-        // Alternar imagen cada 5 segundos
-        const images = ["imgs/sq.png", "imgs/sergio.png"];
-        let current = 0;
-        const img = document.getElementById('profile-img');
-        setInterval(() => {
-            img.classList.add('opacity-0');
-            setTimeout(() => {
-                current = (current + 1) % images.length;
-                img.src = images[current];
-                img.classList.remove('opacity-0');
-            }, 700);
-        }, 5000);
-    </script>
-</body>
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
 </html>

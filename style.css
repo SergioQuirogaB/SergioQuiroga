@@ -1,0 +1,387 @@
+/* ===================================
+   VARIABLES CSS GLOBALES
+   =================================== */
+:root {
+    --primary-gradient: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    --secondary-gradient: linear-gradient(135deg, #4b5563 0%, #6b7280 100%);
+    --dark-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --glass-bg-dark: rgba(0, 0, 0, 0.2);
+    --glass-border-dark: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* ===================================
+     ESTILOS GLOBALES
+     =================================== */
+  * {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+       /* Loading Screen */
+   .loading-screen {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 9999;
+     transition: opacity 0.5s ease-out;
+   }
+
+  .loading-logo {
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+    animation: pulse 2s infinite;
+  }
+
+  /* ===================================
+     FONDO DE PARTÍCULAS
+     =================================== */
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+       /* Custom Cursor */
+   .cursor {
+     width: 20px;
+     height: 20px;
+     border: 2px solid #374151;
+     border-radius: 50%;
+     position: fixed;
+     pointer-events: none;
+     z-index: 9998;
+     transition: transform 0.3s ease;
+   }
+
+   .dark .cursor {
+     border-color: #9ca3af;
+   }
+
+   .cursor-follower {
+     width: 40px;
+     height: 40px;
+     background: rgba(55, 65, 81, 0.2);
+     border-radius: 50%;
+     position: fixed;
+     pointer-events: none;
+     z-index: 9997;
+     transition: transform 0.6s ease;
+   }
+
+   .dark .cursor-follower {
+     background: rgba(156, 163, 175, 0.2);
+   }
+
+  /* Glassmorphism */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Floating Animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+       /* Typing Animation */
+   .typing-animation {
+     overflow: hidden;
+     border-right: 3px solid #374151;
+     white-space: nowrap;
+     animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+   }
+
+   @keyframes typing {
+     from { width: 0; }
+     to { width: 100%; }
+   }
+
+   @keyframes blink-caret {
+     from, to { border-color: transparent; }
+     50% { border-color: #374151; }
+   }
+
+  /* Hover Effects */
+  .card-hover {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+       .card-hover:hover {
+     transform: translateY(-10px) scale(1.02);
+     box-shadow: 0 20px 40px rgba(55, 65, 81, 0.3);
+   }
+
+       /* Skill Bars */
+   .skill-bar {
+     height: 8px;
+     background: rgba(55, 65, 81, 0.1);
+     border-radius: 10px;
+     overflow: hidden;
+   }
+
+  .skill-progress {
+    height: 100%;
+    background: var(--primary-gradient);
+    border-radius: 10px;
+    transition: width 2s ease-in-out;
+  }
+
+  /* Scroll Indicator */
+  .scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--primary-gradient);
+    z-index: 9999;
+    transition: width 0.3s;
+  }
+
+       /* Dark Mode */
+   .dark {
+     background: var(--dark-gradient) !important;
+     color: white !important;
+   }
+
+   .dark .glass {
+     background: var(--glass-bg-dark) !important;
+     border: 1px solid var(--glass-border-dark) !important;
+   }
+
+   .dark .text-gray-800 {
+     color: white !important;
+   }
+
+   .dark .text-gray-600 {
+     color: #d1d5db !important;
+   }
+
+   .dark .text-gray-500 {
+     color: #9ca3af !important;
+   }
+
+   .dark .text-gray-700 {
+     color: #e5e7eb !important;
+   }
+
+   .dark .bg-gradient-to-br {
+     background: var(--dark-gradient) !important;
+   }
+
+   .dark .bg-gradient-to-r {
+     background: linear-gradient(to right, #1f2937, #374151) !important;
+   }
+
+   /* Dark mode gradient text fix */
+   .dark .gradient-text {
+     background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%) !important;
+     -webkit-background-clip: text !important;
+     -webkit-text-fill-color: transparent !important;
+     background-clip: text !important;
+   }
+
+   /* Dark mode statistics numbers */
+   .dark .text-3xl.font-bold.gradient-text {
+     color: white !important;
+     background: none !important;
+     -webkit-text-fill-color: white !important;
+   }
+
+  /* Parallax */
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Button Styles */
+  .btn-primary {
+    background: var(--primary-gradient);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+
+       .btn-primary:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 10px 25px rgba(55, 65, 81, 0.4);
+   }
+
+  /* Scroll to Top */
+  .scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+       .scroll-top:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 10px 25px rgba(55, 65, 81, 0.4);
+   }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary-gradient);
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin: 40px 0;
+  }
+
+       .timeline-item::before {
+     content: '';
+     position: absolute;
+     left: 50%;
+     top: 20px;
+     width: 12px;
+     height: 12px;
+     background: #374151;
+     border-radius: 50%;
+     transform: translateX(-50%);
+     border: 3px solid white;
+   }
+
+           /* Tech Icons Rotation */
+   .tech-icon {
+     transition: all 0.3s ease;
+   }
+
+   .tech-icon:hover {
+     transform: rotate(360deg) scale(1.1);
+   }
+
+   /* Carousel Styles */
+   .carousel-container {
+     position: relative;
+     overflow: hidden;
+     mask: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+     -webkit-mask: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+   }
+
+   .carousel-track {
+     display: flex;
+     animation: scroll 20s linear infinite;
+     width: calc(200px * 20); /* 10 items * 200px * 2 for seamless loop */
+   }
+
+   .carousel-item {
+     min-width: 200px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: 20px;
+   }
+
+   @keyframes scroll {
+     0% { transform: translateX(0); }
+     100% { transform: translateX(calc(-200px * 10)); }
+   }
+
+   .carousel-container:hover .carousel-track {
+     animation-play-state: paused;
+   }
+
+  /* Pulse Animation */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+
+  /* Mobile Optimizations */
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 30px;
+    }
+    
+    .timeline-item::before {
+      left: 30px;
+    }
+  }
