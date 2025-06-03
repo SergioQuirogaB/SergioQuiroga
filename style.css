@@ -386,3 +386,47 @@
       left: 30px;
     }
   }
+
+  /* Estilos para el número de teléfono */
+  .phone-number {
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    -webkit-tap-highlight-color: transparent; /* Eliminar el resaltado táctil en iOS */
+    user-select: none; /* Prevenir selección de texto */
+  }
+
+  .blur-text {
+    filter: blur(4px);
+    transition: filter 0.3s ease;
+  }
+
+  .ver-text {
+    font-size: 0.8em;
+    color: #6b7280;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Aplicar el efecto tanto en hover como en touch */
+  .phone-number:hover .blur-text,
+  .phone-number:active .blur-text,
+  .phone-number:focus .blur-text {
+    filter: blur(0);
+  }
+
+  .phone-number:hover .ver-text,
+  .phone-number:active .ver-text,
+  .phone-number:focus .ver-text {
+    opacity: 0;
+  }
+
+  /* Asegurar que el elemento sea clickeable en móviles */
+  @media (hover: none) {
+    .phone-number {
+      padding: 8px;
+      margin: -8px;
+    }
+  }
