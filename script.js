@@ -89,8 +89,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const typingText = document.querySelector('.typing-animation');
 const texts = [
   'Desarrollador Full Stack Innovador',
-  'Especialista en C# .NET',
-  'Vue.js & PHP',
+  'C# .NET',
+  'Python & PHP',
   'SQL Server & Oracle DB'
 ];
 let textIndex = 0;
