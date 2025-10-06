@@ -27,6 +27,7 @@ const translations = {
         'skills-frontend': 'Frontend Development',
         'skills-backend': 'Backend Development',
         'skills-databases': 'Bases de Datos',
+        'skills-operating-systems': 'Sistemas Operativos',
         
         // Projects Section
         'projects-title': 'Proyectos Destacados',
@@ -99,6 +100,7 @@ const translations = {
         'skills-frontend': 'Frontend Development',
         'skills-backend': 'Backend Development',
         'skills-databases': 'Databases',
+        'skills-operating-systems': 'Operating Systems',
         
         // Projects Section
         'projects-title': 'Featured Projects',

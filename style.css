@@ -158,6 +158,16 @@
     transition: width 2s ease-in-out;
   }
 
+  /* Mejorar contraste de porcentajes en barras de habilidad */
+  .skill-percent {
+    color: #0f172a !important; /* slate-900 */
+    font-weight: 800 !important;
+    letter-spacing: 0.02em;
+  }
+  .dark .skill-percent {
+    color: #f3f4f6 !important; /* gray-100 */
+  }
+
   /* Scroll Indicator */
   .scroll-indicator {
     position: fixed;
@@ -355,6 +365,19 @@
      padding: 20px;
      flex-shrink: 0;
    }
+
+  /* Mejorar legibilidad de etiquetas bajo cada tecnología */
+  .carousel-item span {
+    color: #0f172a; /* slate-900 */
+    font-weight: 800;
+    font-size: 1rem; /* 16px */
+    letter-spacing: 0.01em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+  .dark .carousel-item span {
+    color: #f3f4f6; /* gray-100 */
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+  }
 
    @keyframes scroll {
      0% { transform: translateX(0); }
