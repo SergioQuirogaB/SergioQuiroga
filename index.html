@@ -61,26 +61,34 @@
             <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors">
               <i class="fas fa-moon text-xl"></i>
             </button>
-            <!-- Selector de idioma para móvil (solo ícono, block en móvil, hidden en md+) -->
-            <div class="relative block md:hidden">
-              <button id="mobile-lang-toggle-top" class="p-2 rounded-full bg-white/80 hover:bg-white/100 border border-gray-300 shadow-sm transition-colors">
-                <i class="fas fa-globe text-lg"></i>
+            <!-- Selector de idioma para móvil -->
+            <div class="language-selector block md:hidden">
+              <button id="mobile-lang-toggle-top" class="language-button" type="button" aria-label="Seleccionar idioma">
+                <i class="fas fa-globe" style="font-size: 18px;"></i>
               </button>
-              <div id="mobile-language-dropdown-top" class="hidden absolute left-1/2 -translate-x-1/2 mt-2 w-28 glass rounded-xl shadow-lg py-2 z-50">
-                <button class="block w-full text-left px-4 py-2 rounded-full font-bold text-sm transition-colors mb-1 hover:bg-gray-100 focus:bg-gray-200" data-lang="es" id="lang-esp-mobile-top">ESP</button>
-                <button class="block w-full text-left px-4 py-2 rounded-full font-bold text-sm transition-colors hover:bg-gray-100 focus:bg-gray-200" data-lang="en" id="lang-eng-mobile-top">ENG</button>
+              <div id="mobile-language-dropdown-top" class="language-dropdown">
+                <button class="language-option" data-lang="es" id="lang-esp-mobile-top" type="button">
+                  Español
+                </button>
+                <button class="language-option" data-lang="en" id="lang-eng-mobile-top" type="button">
+                  English
+                </button>
               </div>
             </div>
-            <!-- Selector de idioma para escritorio (md+) -->
-            <div class="relative hidden md:block">
-              <button id="language-toggle" class="flex items-center px-4 py-1 rounded-full bg-white/80 hover:bg-white/100 border border-gray-300 shadow-sm transition-colors font-bold text-gray-700 text-sm gap-2">
-                <i class="fas fa-globe text-base"></i>
-                <span id="current-lang">ESP</span>
-                <i class="fas fa-chevron-down text-xs ml-1"></i>
+            <!-- Selector de idioma para escritorio -->
+            <div class="language-selector hidden md:block">
+              <button id="language-toggle" class="language-button" type="button" aria-label="Seleccionar idioma">
+                <i class="fas fa-globe" style="font-size: 16px;"></i>
+                <span id="current-lang" style="font-size: 13px; font-weight: 700;">ESP</span>
+                <i class="fas fa-chevron-down chevron-icon"></i>
               </button>
-              <div id="language-dropdown" class="hidden absolute right-0 mt-2 w-28 glass rounded-xl shadow-lg py-2 z-50">
-                <button class="block w-full text-left px-4 py-2 rounded-full font-bold text-sm transition-colors mb-1 hover:bg-gray-100 focus:bg-gray-200" data-lang="es" id="lang-esp">ESP</button>
-                <button class="block w-full text-left px-4 py-2 rounded-full font-bold text-sm transition-colors hover:bg-gray-100 focus:bg-gray-200" data-lang="en" id="lang-eng">ENG</button>
+              <div id="language-dropdown" class="language-dropdown">
+                <button class="language-option" data-lang="es" id="lang-esp" type="button">
+                  Español
+                </button>
+                <button class="language-option" data-lang="en" id="lang-eng" type="button">
+                  English
+                </button>
               </div>
             </div>
           </div>
@@ -225,7 +233,7 @@
               <!-- Primer conjunto de tecnologías -->
               <!-- C# .NET -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-csharp w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-microsoft"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">C# .NET</span>
@@ -233,7 +241,7 @@
               
               <!-- PHP -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-php w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-php"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">PHP</span>
@@ -241,7 +249,7 @@
               
               <!-- Vue.js -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-vue w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-vuejs"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Vue.js</span>
@@ -249,7 +257,7 @@
               
               <!-- Python -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-python w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-python"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Python</span>
@@ -257,7 +265,7 @@
               
               <!-- Docker -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-docker w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-docker"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Docker</span>
@@ -265,7 +273,7 @@
               
               <!-- Azure -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-azure w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-cloud"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Azure</span>
@@ -273,7 +281,7 @@
               
               <!-- SQL Server -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-sql w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-database"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">SQL Server</span>
@@ -281,7 +289,7 @@
               
               <!-- MongoDB -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-mongodb w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-leaf"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">MongoDB</span>
@@ -289,7 +297,7 @@
 
               <!-- Oracle DB -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-oracle w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-database"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Oracle DB</span>
@@ -297,7 +305,7 @@
               
               <!-- Git -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-git w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-git-alt"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Git</span>
@@ -305,7 +313,7 @@
               
               <!-- VS Code -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-vscode w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-code"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">VS Code</span>
@@ -313,7 +321,7 @@
               
               <!-- Flask -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-flask w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-flask"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Flask</span>
@@ -321,7 +329,7 @@
               
               <!-- Laravel -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-laravel w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-laravel"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Laravel</span>
@@ -329,7 +337,7 @@
               
               <!-- JavaScript -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-js w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-js-square"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">JavaScript</span>
@@ -337,7 +345,7 @@
               
               <!-- Tailwind CSS -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-tailwind w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-wind"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Tailwind</span>
@@ -345,7 +353,7 @@
               
               <!-- HTML5 -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-html w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-html5"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">HTML5</span>
@@ -353,7 +361,7 @@
               
               <!-- CSS3 -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-css w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-css3-alt"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">CSS3</span>
@@ -361,7 +369,7 @@
 
               <!-- Windows Server -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-windows w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-windows"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Windows Server</span>
@@ -369,7 +377,7 @@
 
               <!-- IIS -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-iis w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-server"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">IIS</span>
@@ -377,7 +385,7 @@
 
               <!-- Windows Desktop -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-desktop w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-desktop"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Windows Desktop</span>
@@ -385,7 +393,7 @@
 
               <!-- Angular -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-angular w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-angular"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Angular</span>
@@ -394,7 +402,7 @@
               <!-- Conjunto duplicado para bucle continuo -->
               <!-- C# .NET -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-csharp w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-microsoft"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">C# .NET</span>
@@ -402,7 +410,7 @@
               
               <!-- PHP -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-php w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-php"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">PHP</span>
@@ -410,7 +418,7 @@
               
               <!-- Vue.js -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-vue w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-vuejs"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Vue.js</span>
@@ -418,7 +426,7 @@
               
               <!-- Python -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-python w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-python"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Python</span>
@@ -426,7 +434,7 @@
               
               <!-- Docker -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-docker w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-docker"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Docker</span>
@@ -434,7 +442,7 @@
               
               <!-- Azure -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-azure w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-cloud"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Azure</span>
@@ -442,7 +450,7 @@
               
               <!-- SQL Server -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-sql w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-database"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">SQL Server</span>
@@ -450,7 +458,7 @@
               
               <!-- MongoDB -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-mongodb w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-leaf"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">MongoDB</span>
@@ -458,7 +466,7 @@
               
               <!-- Oracle DB -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-oracle w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-database"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Oracle DB</span>
@@ -466,7 +474,7 @@
               
               <!-- Git -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-git w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-git-alt"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Git</span>
@@ -474,7 +482,7 @@
               
               <!-- VS Code -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-vscode w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-code"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">VS Code</span>
@@ -482,7 +490,7 @@
               
               <!-- Flask -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-flask w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-flask"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Flask</span>
@@ -490,7 +498,7 @@
               
               <!-- Laravel -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-laravel w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-laravel"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Laravel</span>
@@ -498,7 +506,7 @@
               
               <!-- JavaScript -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-js w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-js-square"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">JavaScript</span>
@@ -506,7 +514,7 @@
               
               <!-- Tailwind CSS -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-600 to-gray-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-tailwind w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fas fa-wind"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">Tailwind</span>
@@ -514,7 +522,7 @@
               
               <!-- HTML5 -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-html w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-html5"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">HTML5</span>
@@ -522,7 +530,7 @@
               
               <!-- CSS3 -->
               <div class="carousel-item group">
-                <div class="tech-icon w-20 h-20 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
+                <div class="tech-icon tech-css w-20 h-20 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-xl group-hover:shadow-2xl">
                   <i class="fab fa-css3-alt"></i>
                 </div>
                 <span class="font-semibold text-gray-700 dark:text-gray-300">CSS3</span>
@@ -848,33 +856,20 @@
           </div>
           
           <div class="glass rounded-3xl p-12 card-hover" data-aos="fade-up" data-aos-delay="200">
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <div class="grid md:grid-cols-2 gap-12 max-w-2xl mx-auto">
               <div class="text-center">
-                <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4 shadow-lg">
                   <i class="fas fa-envelope"></i>
                 </div>
-                <h3 class="font-bold mb-2" data-i18n="contact-email">Email</h3>
-                <p class="text-gray-600">sequiba07@gmail.com</p>
+                <h3 class="font-bold mb-3 text-lg" data-i18n="contact-email">Email</h3>
+                <p class="text-gray-600 break-words">sergioq0303@gmail.com</p>
               </div>
               
               <div class="text-center">
-                <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
-                  <i class="fas fa-phone"></i>
-                </div>
-                <h3 class="font-bold mb-2" data-i18n="contact-phone">Teléfono</h3>
-                <p class="text-gray-600">
-                  <span class="phone-number" data-full-number="+57 313 381 3154">
-                    +57 313 381 31<span class="blur-text">54</span>
-                    <span class="ver-text">Ver</span>
-                  </span>
-                </p>
-              </div>
-              
-              <div class="text-center">
-                <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4">
+                <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4 shadow-lg">
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
-                <h3 class="font-bold mb-2" data-i18n="contact-location">Ubicación</h3>
+                <h3 class="font-bold mb-3 text-lg" data-i18n="contact-location">Ubicación</h3>
                 <p class="text-gray-600">Tunja, Colombia</p>
               </div>
             </div>
@@ -912,50 +907,99 @@
     
     <script src="script.js"></script>
     <script>
-    // Mostrar/ocultar menú de idioma en móvil (barra superior)
-    const mobileLangToggleTop = document.getElementById('mobile-lang-toggle-top');
-    const mobileLangDropdownTop = document.getElementById('mobile-language-dropdown-top');
-    if (mobileLangToggleTop && mobileLangDropdownTop) {
-      mobileLangToggleTop.addEventListener('click', function(e) {
-        e.stopPropagation();
-        mobileLangDropdownTop.classList.toggle('hidden');
-      });
-      document.addEventListener('click', function(e) {
-        if (!mobileLangDropdownTop.classList.contains('hidden')) {
-          mobileLangDropdownTop.classList.add('hidden');
+    // Función mejorada para el selector de idioma
+    function initLanguageSelector() {
+      // Selector de escritorio
+      const langToggle = document.getElementById('language-toggle');
+      const langDropdown = document.getElementById('language-dropdown');
+      
+      // Selector móvil
+      const mobileLangToggle = document.getElementById('mobile-lang-toggle-top');
+      const mobileLangDropdown = document.getElementById('mobile-language-dropdown-top');
+      
+      let currentLang = localStorage.getItem('preferred-language') || 'es';
+      
+      // Función para actualizar la UI del idioma activo
+      function updateLanguageUI(lang) {
+        // Actualizar texto del botón de escritorio
+        const currentLangSpan = document.getElementById('current-lang');
+        if (currentLangSpan) {
+          currentLangSpan.textContent = lang === 'es' ? 'ESP' : 'ENG';
         }
-      });
-      // Resalta el idioma activo en la barra superior móvil
-      function updateMobileLangButtonsTop(lang) {
-        const espBtn = document.getElementById('lang-esp-mobile-top');
-        const engBtn = document.getElementById('lang-eng-mobile-top');
-        if (espBtn && engBtn) {
-          if (lang === 'es') {
-            espBtn.classList.add('bg-blue-500', 'text-white');
-            espBtn.classList.remove('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
-            engBtn.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
-            engBtn.classList.remove('bg-blue-500', 'text-white');
+        
+        // Actualizar clases activas en todas las opciones
+        document.querySelectorAll('.language-option').forEach(option => {
+          if (option.dataset.lang === lang) {
+            option.classList.add('active');
           } else {
-            engBtn.classList.add('bg-blue-500', 'text-white');
-            engBtn.classList.remove('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
-            espBtn.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
-            espBtn.classList.remove('bg-blue-500', 'text-white');
+            option.classList.remove('active');
           }
-        }
+        });
       }
-      let currentLang = 'es';
-      updateMobileLangButtonsTop(currentLang);
-      ['lang-esp-mobile-top', 'lang-eng-mobile-top'].forEach(id => {
-        const btn = document.getElementById(id);
-        if (btn) {
-          btn.addEventListener('click', function() {
-            currentLang = this.dataset.lang;
-            updateMobileLangButtonsTop(currentLang);
-            mobileLangDropdownTop.classList.add('hidden');
-            // Aquí puedes agregar la lógica para cambiar el idioma global
-          });
+      
+      // Toggle dropdown escritorio
+      if (langToggle && langDropdown) {
+        langToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+          langDropdown.classList.toggle('active');
+          langToggle.classList.toggle('active');
+        });
+      }
+      
+      // Toggle dropdown móvil
+      if (mobileLangToggle && mobileLangDropdown) {
+        mobileLangToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          mobileLangDropdown.classList.toggle('active');
+          mobileLangToggle.classList.toggle('active');
+        });
+      }
+      
+      // Cerrar dropdown al hacer click fuera
+      document.addEventListener('click', function(e) {
+        if (langDropdown && !e.target.closest('.language-selector')) {
+          langDropdown.classList.remove('active');
+          if (langToggle) langToggle.classList.remove('active');
+        }
+        if (mobileLangDropdown && !e.target.closest('.language-selector')) {
+          mobileLangDropdown.classList.remove('active');
+          if (mobileLangToggle) mobileLangToggle.classList.remove('active');
         }
       });
+      
+      // Manejar selección de idioma
+      document.querySelectorAll('.language-option').forEach(option => {
+        option.addEventListener('click', function(e) {
+          e.stopPropagation();
+          currentLang = this.dataset.lang;
+          updateLanguageUI(currentLang);
+          
+          // Cerrar dropdowns
+          if (langDropdown) {
+            langDropdown.classList.remove('active');
+            if (langToggle) langToggle.classList.remove('active');
+          }
+          if (mobileLangDropdown) {
+            mobileLangDropdown.classList.remove('active');
+            if (mobileLangToggle) mobileLangToggle.classList.remove('active');
+          }
+          
+          // Cambiar idioma (esto se conecta con translations.js)
+          if (typeof changeLanguage === 'function') {
+            changeLanguage(currentLang);
+          }
+        });
+      });
+      
+      // Inicializar con el idioma guardado
+      updateLanguageUI(currentLang);
+    }
+    
+    // Inicializar cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initLanguageSelector);
+    } else {
+      initLanguageSelector();
     }
     </script>
   </body>

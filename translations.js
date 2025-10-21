@@ -180,33 +180,4 @@ function changeLanguage(lang) {
 document.addEventListener('DOMContentLoaded', () => {
     const savedLanguage = localStorage.getItem('preferred-language') || 'es';
     changeLanguage(savedLanguage);
-    
-    // Configurar el selector de idioma
-    const languageToggle = document.getElementById('language-toggle');
-    const languageDropdown = document.getElementById('language-dropdown');
-    
-    if (languageToggle && languageDropdown) {
-        languageToggle.addEventListener('click', () => {
-            languageDropdown.classList.toggle('hidden');
-        });
-        
-        // Cerrar el dropdown al hacer clic fuera
-        document.addEventListener('click', (e) => {
-            if (!languageToggle.contains(e.target) && !languageDropdown.contains(e.target)) {
-                languageDropdown.classList.add('hidden');
-            }
-        });
-    }
-    
-    // Manejar la selección de idioma
-    document.querySelectorAll('[data-lang]').forEach(element => {
-        element.addEventListener('click', (e) => {
-            e.preventDefault();
-            const lang = element.getAttribute('data-lang');
-            changeLanguage(lang);
-            if (languageDropdown) {
-                languageDropdown.classList.add('hidden');
-            }
-        });
-    });
 }); 

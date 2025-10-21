@@ -333,14 +333,37 @@
      border: 3px solid white;
    }
 
-           /* Tech Icons Rotation */
-   .tech-icon {
-     transition: all 0.3s ease;
-   }
+            /* Tech Icons Rotation */
+    .tech-icon {
+      transition: all 0.3s ease;
+    }
 
-   .tech-icon:hover {
-     transform: rotate(360deg) scale(1.1);
-   }
+    .tech-icon:hover {
+      transform: rotate(360deg) scale(1.1);
+    }
+
+  /* Colores específicos para cada tecnología */
+  .tech-csharp { background: linear-gradient(135deg, #9b4993 0%, #68217a 100%) !important; }
+  .tech-php { background: linear-gradient(135deg, #8892be 0%, #4f5b93 100%) !important; }
+  .tech-vue { background: linear-gradient(135deg, #42b883 0%, #35495e 100%) !important; }
+  .tech-python { background: linear-gradient(135deg, #4b8bbe 0%, #ffd43b 100%) !important; }
+  .tech-docker { background: linear-gradient(135deg, #2496ed 0%, #0db7ed 100%) !important; }
+  .tech-azure { background: linear-gradient(135deg, #0089d6 0%, #50e6ff 100%) !important; }
+  .tech-sql { background: linear-gradient(135deg, #cc2927 0%, #e38c00 100%) !important; }
+  .tech-mongodb { background: linear-gradient(135deg, #4db33d 0%, #3fa037 100%) !important; }
+  .tech-oracle { background: linear-gradient(135deg, #f80000 0%, #c74634 100%) !important; }
+  .tech-git { background: linear-gradient(135deg, #f05032 0%, #c9513f 100%) !important; }
+  .tech-vscode { background: linear-gradient(135deg, #007acc 0%, #005a9e 100%) !important; }
+  .tech-flask { background: linear-gradient(135deg, #000000 0%, #4a4a4a 100%) !important; }
+  .tech-laravel { background: linear-gradient(135deg, #ff2d20 0%, #fb503b 100%) !important; }
+  .tech-js { background: linear-gradient(135deg, #f7df1e 0%, #e6cf1e 100%) !important; }
+  .tech-tailwind { background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%) !important; }
+  .tech-html { background: linear-gradient(135deg, #e34f26 0%, #f06529 100%) !important; }
+  .tech-css { background: linear-gradient(135deg, #1572b6 0%, #33a9dc 100%) !important; }
+  .tech-windows { background: linear-gradient(135deg, #00adef 0%, #0078d4 100%) !important; }
+  .tech-iis { background: linear-gradient(135deg, #5e5e5e 0%, #1570a6 100%) !important; }
+  .tech-desktop { background: linear-gradient(135deg, #0078d4 0%, #50e6ff 100%) !important; }
+  .tech-angular { background: linear-gradient(135deg, #dd0031 0%, #c3002f 100%) !important; }
 
    /* Carousel Styles */
    .carousel-container {
@@ -399,6 +422,145 @@
     animation: pulse 2s infinite;
   }
 
+  /* Selector de idioma mejorado - Compatible con todas las plataformas */
+  .language-selector {
+    position: relative;
+    z-index: 50;
+  }
+
+  .language-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(55, 65, 81, 0.2);
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .language-button:active {
+    transform: scale(0.97);
+  }
+
+  @media (hover: hover) {
+    .language-button:hover {
+      background: rgba(255, 255, 255, 1);
+      border-color: rgba(55, 65, 81, 0.3);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .dark .language-button {
+    background: rgba(31, 41, 55, 0.9);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #e5e7eb;
+  }
+
+  .dark .language-button:hover {
+    background: rgba(31, 41, 55, 1);
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .language-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: white;
+    border: 2px solid rgba(55, 65, 81, 0.1);
+    border-radius: 10px;
+    padding: 6px;
+    min-width: 140px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.2s ease;
+    z-index: 1000;
+  }
+
+  .language-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dark .language-dropdown {
+    background: #1f2937;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .language-option {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 2px solid transparent;
+    text-align: left;
+    background: transparent;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    margin-bottom: 2px;
+  }
+
+  .language-option:last-child {
+    margin-bottom: 0;
+  }
+
+  .language-option:active {
+    transform: scale(0.98);
+  }
+
+  @media (hover: hover) {
+    .language-option:hover {
+      background: rgba(55, 65, 81, 0.08);
+    }
+  }
+
+  .language-option.active {
+    background: #374151;
+    color: white;
+    font-weight: 600;
+  }
+
+  .dark .language-option {
+    color: #e5e7eb;
+  }
+
+  .dark .language-option:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .dark .language-option.active {
+    background: #4b5563;
+    color: white;
+  }
+
+  .chevron-icon {
+    transition: transform 0.2s ease;
+    font-size: 11px;
+    opacity: 0.7;
+  }
+
+  .language-button.active .chevron-icon {
+    transform: rotate(180deg);
+  }
+
   /* Mobile Optimizations */
   @media (max-width: 768px) {
     .timeline::before {
@@ -408,48 +570,48 @@
     .timeline-item::before {
       left: 30px;
     }
+
+    /* Selector de idioma en móvil */
+    .language-button {
+      padding: 10px;
+      min-width: 48px;
+      min-height: 48px;
+    }
+
+    .language-dropdown {
+      position: fixed;
+      top: auto;
+      bottom: auto;
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%) translateY(-8px);
+      min-width: 160px;
+      margin-top: 8px;
+    }
+
+    .language-dropdown.active {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .language-option {
+      padding: 14px 18px;
+      font-size: 15px;
+    }
   }
 
-  /* Estilos para el número de teléfono */
-  .phone-number {
-    cursor: pointer;
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    -webkit-tap-highlight-color: transparent; /* Eliminar el resaltado táctil en iOS */
-    user-select: none; /* Prevenir selección de texto */
+  /* Optimizaciones para pantallas pequeñas */
+  @media (max-width: 390px) {
+    .language-dropdown {
+      min-width: 140px;
+    }
   }
 
-  .blur-text {
-    filter: blur(4px);
-    transition: filter 0.3s ease;
-  }
-
-  .ver-text {
-    font-size: 0.8em;
-    color: #6b7280;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-  }
-
-  /* Aplicar el efecto tanto en hover como en touch */
-  .phone-number:hover .blur-text,
-  .phone-number:active .blur-text,
-  .phone-number:focus .blur-text {
-    filter: blur(0);
-  }
-
-  .phone-number:hover .ver-text,
-  .phone-number:active .ver-text,
-  .phone-number:focus .ver-text {
-    opacity: 0;
-  }
-
-  /* Asegurar que el elemento sea clickeable en móviles */
-  @media (hover: none) {
-    .phone-number {
-      padding: 8px;
-      margin: -8px;
+  /* Optimizaciones iOS Safari */
+  @supports (-webkit-touch-callout: none) {
+    .language-button,
+    .language-option {
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-touch-callout: none;
     }
   }
